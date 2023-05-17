@@ -91,7 +91,7 @@ renderActionCard = (name, cardIndex) => {
     textSpan.addClass('kpi-text');
 
     [labelSpan, imageSpan, textSpan].forEach((e) => cardDiv.append(e));
-    $('div.card.' + name).click(() => $('div.card.' + name + '>span>img').click());
+    $(cardDiv).click(function() { $("[name='" + btnName + "']").trigger('click') });
 }
 
 renderListView = () => {
